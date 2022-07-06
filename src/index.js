@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from "./App";
+import CounterWithReducer from './counterWithReducer';
+import {CartProvider} from "./cart-context";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
+    <CounterWithReducer />
   </React.StrictMode>,
   document.getElementById('root')
 );
